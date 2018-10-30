@@ -71,7 +71,7 @@ After=network.target
 [Service]
 User=pi
 Group=pi
-WorkingDirectory=${PROJECT_ROOT}/scripts
+WorkingDirectory=${PROJECT_ROOT}/WebApp/scripts
 Environment="PATH=${PYTHON_ENV_PATH}/bin"
 ExecStart=${PYTHON_ENV_PATH}/bin/uwsgi --ini uwsgi.ini
 
