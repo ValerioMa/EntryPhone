@@ -8,11 +8,11 @@ import time
 
 
 # https://pinout.xyz/pinout/pin16_gpio23   per trovare mappatura PIN
-pir_sensor = 8
+pir_sensor = 18
 
 
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(pir_sensor, GPIO.IN)
 
