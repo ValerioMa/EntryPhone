@@ -56,6 +56,7 @@ Add in such file the following line to set where the log is saved.
 ```
 logto = /tmp/%n.log
 ```
+and set the number of workers to 1.
 
 ###### Create a systemd Unit File
 Create a system service:
@@ -86,7 +87,7 @@ sudo systemctl enable entryphone_app
 ```
 
 
-###### Configuration of Nginx 
+###### Configuration of Nginx
 Create a new server block configuration file in Nginx's sites-available directory
 ```console
 $ sudo nano /etc/nginx/sites-available/entry_phone
@@ -102,7 +103,7 @@ server {
         uwsgi_pass unix:${PROJECT_ROOT}/WebApp/scripts/entry_phone.sock;
     }
     location /citofono/ {
-    	alias ${PROJECT_ROOT}/WebApp/resources/entryphone/;
+        alias ${PROJECT_ROOT}/WebApp/resources/entryphone/;
     }
 }
 ```

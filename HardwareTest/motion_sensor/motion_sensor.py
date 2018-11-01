@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-	Detects motion and outputs a sound via a piezo buzzer. 
+        Detects motion and outputs a sound via a piezo buzzer.
 """
 
 import RPi.GPIO as GPIO
@@ -22,7 +22,7 @@ try:
         print(pir_level)
 
 #        if  pir_level == True: #If PIR pin goes high, motion is detected
-#            print ("Motion Detected!")    
+#            print ("Motion Detected!")
 #            time.sleep(4) #Keep LED on for 4 seconds
 
     time.sleep(0.2)
